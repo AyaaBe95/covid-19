@@ -15,8 +15,6 @@ app.use(methodOverride('_method'));
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 
-
-
 //routes
 app.get('/',homeHandler);
 app.get('/getCountryResult',getCountryResultHandler);
@@ -25,13 +23,6 @@ app.post('/myRecords',myRecordsHandler);
 app.get('/myRecords',myRecordsHandler2);
 app.get('/details/:id',detailsHandler);
 app.delete('/delete/:id',deleteHandler);
-
-
-
-
-
-
-
 
 //handlers
 
@@ -145,19 +136,18 @@ function AllCountries(data){
 }
 
 //database setup
-// const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client(process.env.DATABASE_URL);
 
-const client = new pg.Client({
-	connectionString: process.env.DATABASE_URL,
-	ssl: { rejectUnauthorized: false },
-});
+// const client = new pg.Client({
+// 	connectionString: process.env.DATABASE_URL,
+// 	ssl: { rejectUnauthorized: false },
+// });
 
 
 
 function errorHandler(err,req,res){
     res.status(500).send(err);
 }
-
 
 
 const PORT = process.env.PORT || 3030;
