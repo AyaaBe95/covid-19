@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS nnn;
+
+
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY,
+    n1 VARCHAR(255),
+    n2 VARCHAR(255),
+    n3 VARCHAR(255),
+    n4 VARCHAR(255),
+    n5 VARCHAR(255)
+);
