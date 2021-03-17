@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../layout/head') %>
+
+
+    <body>
+        <header>
+            <%- include('../layout/header') %>
+            
+        </header>
+        <main>
+            <section class="info">
+                <% data.forEach(val => { %>
+                    <div>
+                        <h1><%= val.country %> </h1>
+                        <p>Date: <%= val.date %>  </p>
+
+                        <form action="/details/<%= val.id %> " method="GET" >
+                            <input type="submit" value="View Details" class="button">
+                        </form>
+                    </div>
+                <% }) %>
+    
+            </section>
+            
+        </main>
+        <footer></footer>
+        </body>
+        </html>

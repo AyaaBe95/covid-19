@@ -1,1 +1,51 @@
+body{
+    background-color: rgb(76, 90, 85);
+    width: 100%;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    margin: 2rem;
+    
+}
+
+.info div{
+    background-color: burlywood;
+    text-align: center;
+    padding: 30px;
+    border: chocolate solid 2px;
+}
+
+.button{
+    background-color: cornsilk;
+    border: cornsilk solid 1px;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.home{
+    text-align: center;
+    width: 50%;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(9, 10, 9);
+}
+
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
 
