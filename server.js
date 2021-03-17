@@ -136,12 +136,13 @@ function AllCountries(data){
 }
 
 //database setup
-const client = new pg.Client(process.env.DATABASE_URL);
+// const client = new pg.Client(process.env.DATABASE_URL);
 
-// const client = new pg.Client({
-// 	connectionString: process.env.DATABASE_URL,
-// 	ssl: { rejectUnauthorized: false },
-// });
+//deploy on heroku
+const client = new pg.Client({
+	connectionString: process.env.DATABASE_URL,
+	ssl: { rejectUnauthorized: false },
+});
 
 
 
